@@ -12,9 +12,11 @@ RUN apt-get update && apt-get install -y \
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
 RUN docker-php-ext-install pdo_mysql mbstring
 
-WORKDIR /src
-COPY composer.json .
+WORKDIR /app/src
+COPY /app/composer.json .
+
 RUN composer install --no-scripts
+
 COPY . .
 
 CMD symfony server:start --port=80
