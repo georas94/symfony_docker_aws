@@ -10,11 +10,11 @@ RUN apt-get update && apt-get install -y \
     libxml2-dev \
     zip \
     unzip
-RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/bin/composer --filename=composer
+RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/composer --filename=composer
 RUN curl -sS https://get.symfony.com/cli/installer | bash
 RUN docker-php-ext-install pdo_mysql mbstring
 
-COPY --from=composer /usr/bin/composer /usr/bin/composer
+COPY --from=composer /usr/local/composer /usr/bin/composer
 COPY ./app/composer.* ./
 
 RUN composer install --no-scripts --no-interaction --optimize-autoloader
