@@ -22,6 +22,8 @@ COPY ./app/composer.* ./
 
 RUN composer install --no-scripts --no-interaction --optimize-autoloader
 
+RUN chown -R www-data:www-data app/symfony/var
+
 COPY ./app ./
 
 CMD symfony server:ca:install
