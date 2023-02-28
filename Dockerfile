@@ -20,10 +20,9 @@ RUN docker-php-ext-install pdo_mysql mbstring
 COPY --from=composer:latest /usr/bin/composer /usr/local/bin/composer
 COPY ./app/composer.* ./
 
+RUN mkdir -p /app/var/cache
 RUN composer install --no-scripts --no-interaction --optimize-autoloader
 
-RUN sudo chown -R www-data:www-data /var
-RUN sudo chmod -R 777 /var/cache
 
 COPY ./app ./
 
