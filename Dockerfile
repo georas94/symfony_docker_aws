@@ -22,7 +22,8 @@ COPY ./app/composer.* ./
 
 RUN composer install --no-scripts --no-interaction --optimize-autoloader
 
-RUN chown -R www-data:www-data /var
+RUN sudo chown -R www-data:www-data /var
+RUN sudo chmod -R 777 /var/cache
 
 COPY ./app ./
 
