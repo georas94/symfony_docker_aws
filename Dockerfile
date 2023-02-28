@@ -21,7 +21,7 @@ COPY --from=composer:latest /usr/bin/composer /usr/local/bin/composer
 COPY ./app/composer.* ./
 
 RUN mkdir -p /app/symfony/var/cache/dev
-RUN chmod -R 777 /app/symfony/var/cache /app/symfony/var/logs
+RUN chmod -R 777 /app/symfony/var/cache
 RUN composer install --no-scripts --no-interaction --optimize-autoloader
 
 
