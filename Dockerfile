@@ -22,7 +22,7 @@ COPY ./app/composer.* ./
 
 RUN composer install --no-scripts --no-interaction --optimize-autoloader
 
-RUN chown -R www-data:www-data var
+RUN chown -R www-data:www-data /app/var
 
 COPY ./app ./
 
