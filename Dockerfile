@@ -1,5 +1,7 @@
 FROM php:8.1-fpm
 
+WORKDIR /app/symfony
+
 RUN apt-get update && apt-get install -y \
     git \
     curl \
@@ -8,18 +10,15 @@ RUN apt-get update && apt-get install -y \
     libxml2-dev \
     zip \
     unzip
-
-RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
-
+RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/bin/composer --filename=composer
 RUN curl -sS https://get.symfony.com/cli/installer | bash
-
 RUN docker-php-ext-install pdo_mysql mbstring
 
-WORKDIR /app/src
-COPY /app/composer.json .
+COPY --from=composer /usr/bin/composer /usr/bin/composer
+COPY ./app/composer.* ./
 
-RUN composer install --no-scripts
+RUN composer install --no-scripts --no-interaction --optimize-autoloader
 
-COPY . .
+COPY ./app ./
 
 CMD symfony server:start --port=80
