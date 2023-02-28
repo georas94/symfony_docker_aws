@@ -10,7 +10,6 @@ RUN apt-get update && apt-get install -y \
     libxml2-dev \
     zip \
     unzip \
-    \
 
 RUN docker-php-ext-install pdo_mysql mbstring
 
