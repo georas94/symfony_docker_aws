@@ -24,4 +24,5 @@ RUN composer install --no-scripts --no-interaction --optimize-autoloader
 
 COPY ./app ./
 
+CMD symfony server:ca:install
 CMD symfony server:start --port=80

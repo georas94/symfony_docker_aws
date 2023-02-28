@@ -1,13 +1,13 @@
 {
-  "taskDefinitionArn": "arn:aws:ecs:eu-west-3:386574463109:task-definition/sandboxv1:1",
+  "taskDefinitionArn": "arn:aws:ecs:eu-west-3:386574463109:task-definition/sandboxTaskDefinitionv2:1",
   "containerDefinitions": [
     {
-      "name": "sandboxv1",
-      "image": "386574463109.dkr.ecr.eu-west-3.amazonaws.com/sandbox",
+      "name": "sandboxv2",
+      "image": "386574463109.dkr.ecr.eu-west-3.amazonaws.com/sandboxv2",
       "cpu": 0,
       "portMappings": [
         {
-          "name": "sandboxv1-80-tcp",
+          "name": "sandboxv2-80-tcp",
           "containerPort": 80,
           "hostPort": 80,
           "protocol": "tcp",
@@ -23,14 +23,14 @@
         "logDriver": "awslogs",
         "options": {
           "awslogs-create-group": "true",
-          "awslogs-group": "/ecs/sandboxv1",
+          "awslogs-group": "/ecs/sandboxTaskDefinitionv2",
           "awslogs-region": "eu-west-3",
           "awslogs-stream-prefix": "ecs"
         }
       }
     }
   ],
-  "family": "sandboxv1",
+  "family": "sandboxTaskDefinitionv2",
   "executionRoleArn": "arn:aws:iam::386574463109:role/ecsTaskExecutionRole",
   "networkMode": "awsvpc",
   "revision": 1,
@@ -76,7 +76,7 @@
     "cpuArchitecture": "X86_64",
     "operatingSystemFamily": "LINUX"
   },
-  "registeredAt": "2023-02-27T17:09:04.768Z",
+  "registeredAt": "2023-02-28T21:13:02.079Z",
   "registeredBy": "arn:aws:iam::386574463109:root",
   "tags": []
 }
