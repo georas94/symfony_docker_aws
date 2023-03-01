@@ -8,8 +8,8 @@ on:
 env:
   AWS_REGION: eu-west-3
   ECR_REPOSITORY: sandboxv3
-  ECS_SERVICE: sandboxServicev9
-  ECS_CLUSTER: sandboxClusterv3
+  ECS_SERVICE: Ec2Servicev2
+  ECS_CLUSTER: Ec2Clusterv1
   ECS_TASK_DEFINITION: .github/workflows/td.json
 
   CONTAINER_NAME: sandboxv3

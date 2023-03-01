@@ -1,5 +1,5 @@
 {
-  "taskDefinitionArn": "arn:aws:ecs:eu-west-3:386574463109:task-definition/sandboxTaskDefv3",
+  "taskDefinitionArn": "arn:aws:ecs:eu-west-3:386574463109:task-definition/sandboxEc2TaskDefv1",
   "containerDefinitions": [
     {
       "name": "sandboxv3",
@@ -10,78 +10,48 @@
           "name": "sandboxv3-80-tcp",
           "containerPort": 80,
           "hostPort": 80,
-          "protocol": "tcp",
-          "appProtocol": "http"
+          "protocol": "tcp"
         },
         {
           "name": "sandboxv3-443-tcp",
           "containerPort": 443,
           "hostPort": 443,
-          "protocol": "tcp",
-          "appProtocol": "http"
+          "protocol": "tcp"
         }
       ],
       "essential": true,
       "environment": [],
       "mountPoints": [],
-      "volumesFrom": [],
-      "logConfiguration": {
-        "logDriver": "awslogs",
-        "options": {
-          "awslogs-create-group": "true",
-          "awslogs-group": "/ecs/sandboxTaskDefv3",
-          "awslogs-region": "eu-west-3",
-          "awslogs-stream-prefix": "ecs"
-        }
-      }
+      "volumesFrom": []
     }
   ],
-  "family": "sandboxTaskDefv3",
+  "family": "sandboxEc2TaskDefv1",
   "executionRoleArn": "arn:aws:iam::386574463109:role/ecsTaskExecutionRole",
-  "networkMode": "awsvpc",
   "volumes": [],
   "status": "ACTIVE",
   "requiresAttributes": [
     {
-      "name": "com.amazonaws.ecs.capability.logging-driver.awslogs"
-    },
-    {
-      "name": "ecs.capability.execution-role-awslogs"
-    },
-    {
       "name": "com.amazonaws.ecs.capability.ecr-auth"
     },
     {
-      "name": "com.amazonaws.ecs.capability.docker-remote-api.1.19"
-    },
-    {
       "name": "ecs.capability.execution-role-ecr-pull"
-    },
-    {
-      "name": "com.amazonaws.ecs.capability.docker-remote-api.1.18"
-    },
-    {
-      "name": "ecs.capability.task-eni"
-    },
-    {
-      "name": "com.amazonaws.ecs.capability.docker-remote-api.1.29"
     }
   ],
   "placementConstraints": [],
   "compatibilities": [
-    "EC2",
-    "FARGATE"
+    "EC2"
   ],
   "requiresCompatibilities": [
-    "FARGATE"
+    "EC2"
   ],
   "cpu": "1024",
-  "memory": "3072",
-  "runtimePlatform": {
-    "cpuArchitecture": "X86_64",
-    "operatingSystemFamily": "LINUX"
-  },
-  "registeredAt": "2023-03-01T03:50:25.406Z",
-  "registeredBy": "arn:aws:iam::386574463109:user/rashid",
-  "tags": []
+  "memory": "1024",
+  "registeredAt": "2023-03-01T19:32:27.109Z",
+  "registeredBy": "arn:aws:iam::386574463109:root",
+  "tags": [
+    {
+      "key": "1",
+      "value": "tag test"
+    }
+  ]
 }
