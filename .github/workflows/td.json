@@ -1,5 +1,4 @@
 {
-  "taskDefinitionArn": "arn:aws:ecs:eu-west-3:386574463109:task-definition/ec2TaskDefv1",
   "containerDefinitions": [
     {
       "name": "sandboxv3",
@@ -28,26 +27,11 @@
   "family": "ec2TaskDefv1",
   "taskRoleArn": "arn:aws:iam::386574463109:role/ecsTaskExecutionRole",
   "volumes": [],
-  "status": "ACTIVE",
-  "requiresAttributes": [
-    {
-      "name": "com.amazonaws.ecs.capability.ecr-auth"
-    },
-    {
-      "name": "com.amazonaws.ecs.capability.task-iam-role"
-    }
-  ],
   "placementConstraints": [],
-  "compatibilities": [
-    "EXTERNAL",
-    "EC2"
-  ],
   "requiresCompatibilities": [
     "EC2"
   ],
   "cpu": "1024",
   "memory": "100",
-  "registeredAt": "2023-03-01T23:39:06.348Z",
-  "registeredBy": "arn:aws:iam::386574463109:root",
   "tags": []
 }
