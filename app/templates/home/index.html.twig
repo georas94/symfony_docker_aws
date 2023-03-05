@@ -1,12 +1,182 @@
 {% extends 'base.html.twig' %}
 
-{% block body %}
-<style>
-    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
-    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
-</style>
+{% block title %}Fondation Barke Beidari{% endblock %}
 
-<div class="example-wrapper">
-    <h1>Changement ! ✅</h1>
-</div>
+{% block body %}
+    <div class="progress-bar" ></div>
+    <button class="back-to-top hidden">
+        <svg xmlns="http://www.w3.org/2000/svg" class="back-to-top-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 11l5-5m0 0l5 5m-5-5v12" />
+        </svg>
+    </button>
+    <div class="progress-bar" ></div>
+    <nav class="navbar navbar-expand-sm bg-light fixed-top">
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav ml-auto">
+                <a style="font-size: 1.1em" class="nav-item nav-link text-secondary" href="{{ path('app_home') }}">Accueil <span class="sr-only">(current)</span></a>
+                <a style="font-size: 1.1em" class="nav-item nav-link mt-4 text-secondary" href="#donate_details">Articles</a>
+                <a style="font-size: 1.1em" class="nav-item nav-link mt-4 text-secondary" href="#donate">Donner</a>
+                <a style="font-size: 1.1em" class="nav-item nav-link mt-4 text-secondary" href="#history">À propos</a>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <!-- hero banner -->
+        <section class="hero_banner">
+            <div class="overlay">
+                <div class="banner_content">
+                </div>
+            </div>
+        </section>
+
+        <!-- donate plan -->
+        <section class="donate_plan pt-3">
+            <div class="section_details">
+                <h1>Pourquoi F3B ?</h1>
+            </div>
+            <div class="donate_carts">
+                <div class="cart_items">
+                    <img src="{{ asset('images/icons/agriculteur.png') }}" alt="food">
+                    <h2>Pour l'agriculture</h2>
+                    <p>Contribuer à l’amélioration de la sécurité alimentaire et sanitaire des populations à travers nos actions</p>
+                </div>
+
+                <div class="cart_items">
+                    <img src=" {{ asset('images/icons/lis.png') }}" alt="shelter">
+                    <h2>Pour l'éducation</h2>
+                    <p>Promouvoir les initiatives en matières de formation et d’éducation pour l’épanouissement
+                        socio-économique et professionnel des jeunes</p>
+                </div>
+
+                <div class="cart_items">
+                    <img src="{{ asset('images/icons/solidarite.png') }}" alt="Frame">
+                    <h2>L'accompagnement</h2>
+                    <p>Redonner de la joie et de l'espoir aux populations démunies. Notamment aux déplacés interne</p>
+                </div>
+            </div>
+            <div class="section_details">
+                <p>Tout ceci afin de perpétuer les idéaux, la vision et tout l’espoir que suscitait El Hadj Hamadoun Tamboura</p>
+            </div>
+
+            <div class="donate_details" id="donate_details">
+                <div class="donate_des_box">
+                    <div class="donate_content">
+                        <h2>Sur la route de l’école,<br> la destinée</h2>
+                        <p>
+                            Cet ouvrage rappel à l’homme que la vie est une école. Ce livre est le résumé de la vie
+                            de El Hadji Tamboura. Hamadou Tamboura a une riche carrière professionnelle qui lui permet
+                            de découvrir l’homme. Il s’est investi dans la formation des jeunes. L’ouvrage nous renseigne également
+                            sur la foi de El Hadji Tamboura. L’ouvrage se termine par son rêve. L’ouvrage présente le courage,
+                            l’endurance, l’engagement dans le travail bien fait, l’honnêteté et l’amour de son village
+                        </p>
+
+                        <a type="button" class="btn_primary lire text-center text-secondary" href="{{ path('route_destine') }}">
+                            Lire
+                        </a>
+                    </div>
+                    <img src="{{ asset('images/livre_route_destine.jpeg') }}" alt="donate">
+                </div>
+
+                <div class="donate_des_box">
+                    <img src="{{ asset('images/lancement.jpeg') }}" alt="donate">
+                    <div class="donate_content">
+                        <h2>Début de nos <br> activités</h2>
+                        <p>
+                            Cet ouvrage rappel à l’homme que la vie est une école. Ce livre est le résumé de la vie
+                            de El Hadji Tamboura. Hamadou Tamboura a une riche carrière professionnelle qui lui permet
+                            de découvrir l’homme. Il s’est investi dans la formation des jeunes. L’ouvrage nous renseigne également
+                            sur la foi de El Hadji Tamboura. L’ouvrage se termine par son rêve. L’ouvrage présente le courage,
+                            l’endurance, l’engagement dans le travail bien fait, l’honnêteté et l’amour de son village
+                        </p>
+                        <a type="button" class="btn_primary lire text-center text-secondary" href="{{ path('debut_activites') }}">
+                            Lire
+                        </a>
+                    </div>
+                </div>
+
+                <div class="donate_des_box">
+                    <div class="donate_content">
+                        <h2>À remplir plus tard</h2>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi iaculis finibus orci, vitae iaculis
+                            nisl consequat quis. Ut at nulla molestie, vestibulum massa pharetra, tempor ipsum. Proin id lectus
+                            nec elit tempor luctus. Vestibulum sed sapien elit. Vivamus non leo tempus, sodales magna nec,
+                            tempus ante. Donec sit amet quam tellus
+                        </p>
+                        <a type="button" class="btn_primary lire text-center text-secondary" href="#">
+                            Lire
+                        </a>
+                    </div>
+                    <img src="{{ asset('images/deplaces.jpeg') }}" alt="donate">
+                </div>
+            </div>
+        </section>
+
+        <!-- Donate Today -->
+        <section class="donate" id="donate">
+            <div class="section_details">
+                <h1>Donner aujourd'hui</h1>
+                <p><i>Afin de nous soutenir dans nos actions</i></p>
+            </div>
+            <div class="donate_amount">
+                <div class="amount">
+                    <span class="amount-item">100cfa</span>
+                    <span class="amount-item">200cfa</span>
+                    <span class="amount-item">500cfa</span>
+                    <span class="amount-item">1000cfa</span>
+                </div>
+                <input class="donation-input" name="donation-input" id="donation-input" type="text" placeholder="Autre montant (Cfa)"/>
+            </div>
+            <button class="btn_primary">Donner</button>
+        </section>
+
+        <!-- history -->
+        <section class="history pt-3 mt-5" id="history">
+            <div class="section_details">
+                <h1>À propos de l'association</h1>
+                <div style="background-color: rgba(79, 157, 166, 0.1);margin-right: 15%;margin-left: 15%;" class="cart_items cart_items_history mt-3">
+                    <img src="{{ asset('images/icons/nouvelle-annee.png') }}" alt="food">
+                    <h2>Création de l'association</h2>
+                </div>
+                <div style="background-color: rgb(79 157 166 / 24%);margin-right: 15%;margin-left: 15%;" class="cart_items cart_items_history mt-3">
+                    <img src="{{ asset('images/icons/team.png') }}" alt="food">
+                    <h2>Membres fondateurs</h2>
+                    <div class="cart_items_history_founders d-flex justify-content-between mt-5">
+                       <div>
+                           <img src="{{ asset('images/founder1.jpg') }}" alt="">
+                           <h4 class="mt-2">TAMBOURA <br> Djiblil</h4>
+                       </div>
+                       <div>
+                           <img src="{{ asset('images/founder2.jpg') }}" alt="">
+                           <h4 class="mt-2">SONDO/TAMBOURA<br> Fatimata Nènè</h4>
+                       </div>
+                    </div>
+                </div>
+                <div style="background-color: rgba(79, 157, 166, 0.1);margin-right: 15%;margin-left: 15%;" class="cart_items cart_items_history mt-3">
+                    <img src="{{ asset('images/icons/balance.png') }}" alt="food">
+                    <h2 class="mt-2">Forme juridique</h2>
+                </div>
+            </div>
+        </section>
+
+        <!-- get my updates -->
+        <section class="updates pt-3">
+            <div class="section_details">
+                <h1>S'abonner à notre newsletter</h1>
+                <p></p>
+            </div>
+
+            <div class="subscribe_box">
+                <div class="subscribe">
+                    <input type="email" placeholder="Email">
+                    <button class="btn_subscribe">Subscribe</button>
+                </div>
+            </div>
+        </section>
+    </main>
+{% endblock %}
+{% block javascripts %}
+    {{ parent() }}
+    <script src="{{ asset('js/base.js') }}" ></script>
 {% endblock %}

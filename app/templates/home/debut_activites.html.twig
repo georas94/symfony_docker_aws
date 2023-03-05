@@ -1,0 +1,61 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Début de nos activités{% endblock %}
+
+{% block body %}
+    <nav class="navbar-article navbar-expand-sm bg-light fixed-top">
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav-article ml-auto">
+                <a class="nav-item nav-link active" style="font-size: 1.2em;color: black !important; font-weight: bold !important;" href="{{ path('app_home') }}">Accueil <span class="sr-only">(current)</span></a>
+            </div>
+        </div>
+    </nav>
+
+    <h1 style="margin-top: 7%" class="text-center">Début de nos activités</h1>
+
+    <div class="d-flex justify-content-center">
+        <img style="width: 60em; height: 30em" src="{{ asset('images/lancement.jpeg') }}" alt="donate">
+    </div>
+
+    <h5 style="margin-right: 10%; margin-left: 10%; margin-top: 3%;font-size: 1.4em;">
+        La Fondation Belko Barke Beïdari (F3B) a tenu une conférence de presse à Ouagadougou ce lundi 17 janvier 2022.
+        L’objectif de cette rencontre avec les hommes de médias était d’informer l’opinion publique de la naissance de la
+        fondation Belko et de marquer le début de leurs activités. Ladite conférence s’est tenue sous le leadership du SG
+        de la F3B, Hamidou Hamadou Tamboura et de la présidente Fatima Néné Tamboura/ Sondo.
+    </h5>
+    <p style="margin-right: 10%; margin-left: 10%; margin-top: 3%;font-size: 1.2em;">
+        Conscient de la nécessité d’insistance sur les secteurs de l’éducation et de la santé au Burkina Faso, la F3B s’est
+        révélée au grand public au cours d’une conférence de presse. Elle est une structure de la société civile qui entend
+        apporter sa modeste contribution à l’édification du Burkina Faso en général et de la région du Sahel en particulier
+        dans l’éducation et la santé. Il convient de retenir que l’objectif généralement de la Fondation Belko est de permettre
+        aux populations vulnérables (rurales, jeunes, femmes) de se prendre en charge et de jouer pleinement le rôle qui est le
+        leur dans trois domaines, développement rural (agriculture, élevage, reboisement), éducation et santé. Dans un sens plus
+        large, la F3B vise à contribuer à l’amélioration de la sécurité alimentaire et sanitaire des populations, à promouvoir des
+        initiatives en matières de formation et d’éducation pour l’épanouissement socio-économique et professionnel des jeunes et
+        le bien-être des enfants et des femmes, à constituer et gérer une base de données des compétences et constituer des fonds
+        spéciaux auprès d’établissement de crédits.
+    </p>
+    <p style="margin-right: 10%; margin-left: 10%; margin-top: 3%;font-size: 1.2em;">
+        Selon le SG de la Fondation Belko Barké Béïdari, Hamidou Hamadou Tamboura, la F3B est née de la volonté de jeunes burkinabè
+        d’honorer la mémoire d’un homme qui durant toute sa vie s’est battu vaille que vaille pour apporter sa modeste contribution
+        à un idéal d’émancipation intellectuelle en la personne de Belko Barké ou encore Grand Papa. À en croire, le SG, l’homme,
+        instituteur colonial, a œuvré inlassablement à la promotion d’une éducation citoyenne ancrée profondément dans les valeurs
+        africaines. “Véritable homme-orchestre, il a effectivement tendu de manière harmonieuse de nombreuses cordes à son arc de
+        vie: éducateur/pédagogue, agriculture/éleveur, formateur de jeunes agriculteurs, linguistique, journaliste, écrivain, homme
+        politique, il a été acteur de l’essentiel des combats de son époque”, a laissé entendre le SG.
+    </p>
+    <p style="margin-right: 10%; margin-left: 10%; margin-top: 3%;font-size: 1.2em;">
+        Il faut préciser que c’est au regard de ces observations fortement encouragées par les nombreux témoignages de ses anciens
+        élèves, anciens collègues de l’administration publique et des ONG paysannes que les fondateurs ont eues l’idée de mettre sur
+        pied une structure qui va servir à perpétuer non seulement sa mémoire, mais surtout, les vertus, les principes de vie, les
+        valeurs que Belko Barké Béïdari a ensemencé.
+    </p>
+    <p style="margin-right: 10%; margin-left: 10%; margin-top: 3%;font-size: 1.2em;">
+        Du reste, il faut noter que le siège social de la Fondation Belko Barké Béïdari est dans l’arrondissement 3 de la ville de
+        Ouagadougou précisément à Tampouy. Dans les prochains jours, la fondation va officiellement marquer le top départ de ses
+        activités en même temps la pose de la première pierre de la construction de son siège.
+    </p>
+    <div style="margin: 3% 10%;font-size: 1.2em;font-weight: bold">
+        Article de cite elegance que vous pouvez trouver <a href="https://citeelegance.net/?p=9760" target="_blank">ici</a>
+    </div>
+{% endblock %}
